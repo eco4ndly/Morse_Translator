@@ -1,7 +1,7 @@
 # Morselator
 ##### Translate Morse Code to English and Vice-Versa
 
-Morselator in an application which can be used to do translation from Morse Code to English and Vide-Versa Markdown editor.
+Morselator in an application which can be used to do translation from Morse Code to English and Vide-Versa.
 
 [![N|Solid](https://github.com/eco4ndly/Morse_Translator/blob/master/screens/Morselator-feature-graphic.png)](http://sayanporya.com)
 
