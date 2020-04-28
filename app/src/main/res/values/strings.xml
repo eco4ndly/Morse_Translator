@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Morselator</string>
+    <string name="version">v%1$s</string>
+    <string name="morse_to_english">Morse to English</string>
+    <string name="english_to_morse">English to Morse</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+  <string name="dev_name">Sayan Porya</string>
+</resources>

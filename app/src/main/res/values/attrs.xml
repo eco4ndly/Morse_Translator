@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="buttonTextColor" format="reference"/>
+    <attr name="primaryTextColor" format="reference"/>
+    <attr name="backgroundColor" format="reference"/>
+    <attr name="editTextHintColor" format="reference"/>
+    <attr name="buttonBackgroundColor" format="reference"/>
+    <attr name="iconColor" format="reference"/>
+    <attr name="themeToggleButtonColor" format="reference"/>
+    <attr name="editTextBorderColor" format="reference"/>
+</resources>

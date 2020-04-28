@@ -1,0 +1,2 @@
+rootProject.name='Morse_Translater'
+include ':app'
