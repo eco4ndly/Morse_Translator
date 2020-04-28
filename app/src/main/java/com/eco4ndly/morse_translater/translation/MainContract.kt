@@ -18,8 +18,15 @@ interface MainContract {
     }
 
     interface MainPresenter: BasePresenter<MainView> {
+
+        /**
+         * When English to Morse Translation Requested
+         */
         fun onEnglishToMorseTranslationRequested(englishString: String)
 
+        /**
+         * When Morse to English Translation Requested
+         */
         fun onMorseToEnglishTranslationRequested(morseString: String)
 
         fun onMorseTextFieldClearRequested()
