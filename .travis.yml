@@ -3,7 +3,11 @@ language: android
 android:
   components:
     - build-tools-29.0.2
-    - android-29
+    - $ANDROID_TARGET
+
+env:
+  matrix:
+    - ANDROID_TARGET=android-29  ANDROID_ABI=armeabi-v7a
 
 script:
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
