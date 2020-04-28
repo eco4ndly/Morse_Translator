@@ -3,6 +3,9 @@
 
 Morselator in an application which can be used to do translation from Morse Code to English and Vide-Versa.
 
+[![Build Status](https://travis-ci.org/eco4ndly/Morse_Translator.svg?branch=master)](https://travis-ci.org/eco4ndly/Morse_Translator)
+
+
 [![N|Solid](https://github.com/eco4ndly/Morse_Translator/blob/master/screens/Morselator-feature-graphic.png)](http://sayanporya.com)
 
 [App Store Link](https://play.google.com/store/apps/details?id=com.eco4ndly.morse_translate)
