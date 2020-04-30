@@ -9,6 +9,8 @@ import com.eco4ndly.morse_translater.storage.Prefs.TC
 
 /**
  * A Sayan Porya code on 28/04/20
+ *
+ * Extend if you wanna play with themes
  */
 abstract class ThemedActivity: AppCompatActivity() {
 
