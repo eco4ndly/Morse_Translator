@@ -40,6 +40,9 @@ class Prefs private constructor(context: Context) {
     }
 
 
+    /**
+     * Returns the currently saved/selected theme in shared preference
+     */
     @TC
     fun getCurrentTheme(): Int {
         return sharedPreferences.getInt(
@@ -48,11 +51,18 @@ class Prefs private constructor(context: Context) {
         )
     }
 
+    /**
+     * Saves the given theme in param as the current theme
+     */
     fun setCurrentTheme(@TC theme: Int) {
         sharedPreferences.edit().putInt(THEME_KEY, theme).apply()
     }
 
 
+    /**
+     * Denotes the type of themes available to choose
+     * This is used so that no other int value could be passed other than these as theme value
+     */
     @IntDef(
         THEME_DARK,
         THEME_LIGHT
