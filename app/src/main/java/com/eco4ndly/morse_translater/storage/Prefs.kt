@@ -20,6 +20,9 @@ class Prefs private constructor(context: Context) {
         private var INSTANCE: Prefs? = null
         private const val THEME_KEY = "app_theme_key"
 
+        /**
+         * Returns lazily initialized Prefs instance, thread safely
+         */
         @Synchronized
         fun getInstance(application: Application): Prefs {
             if (INSTANCE == null) {
