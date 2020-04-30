@@ -1,5 +1,6 @@
 package com.eco4ndly.morse_translater.translation
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ClipData
@@ -31,6 +32,11 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
+/**
+ * A Sayan Porya code on 24/04/20
+ *
+ * The main class as the name suggests
+ */
 class MainActivity : ThemedActivity(), MainView {
 
   lateinit var presenter: MainPresenter
@@ -245,6 +251,7 @@ class MainActivity : ThemedActivity(), MainView {
         .show()
   }
 
+  @SuppressLint("InflateParams")
   private fun showAboutDialog() {
     val view = LayoutInflater.from(this)
         .inflate(R.layout.layout_about, null, false)
