@@ -10,10 +10,20 @@ import com.eco4ndly.morse_translater.base.BaseView
  */
 interface MainContract {
     interface MainView: BaseView {
+
+        /**
+         * Sets the given text in param in the English Edit Text
+         */
         fun showTranslatedEnglish(translatedEnglishStr: String)
 
+        /**
+         * Sets the given text in param in the Morse Code Edit Text
+         */
         fun showTranslatedMorse(translatedMorseStr: String)
 
+        /**
+         * Shows Toast
+         */
         fun showToast(@StringRes stringId: Int)
     }
 
@@ -29,12 +39,24 @@ interface MainContract {
          */
         fun onMorseToEnglishTranslationRequested(morseString: String)
 
+        /**
+         * When User clicks on Clear button for Morse Code Edit Text field
+         */
         fun onMorseTextFieldClearRequested()
 
+        /**
+         * When User clicks on Clear button for English Edit Text field
+         */
         fun onEnglishTextFieldClearRequested()
 
+        /**
+         * When User clicks on Copy button for English Edit Text field
+         */
         fun onCopyEnglishTextRequested(englishString: String)
 
+        /**
+         * When User clicks on Copy button for Morse Code Edit Text field
+         */
         fun onCopyMorseTextRequested(morseString: String)
     }
 }
