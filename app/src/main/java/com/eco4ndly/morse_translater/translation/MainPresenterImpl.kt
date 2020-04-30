@@ -32,13 +32,6 @@ class MainPresenterImpl: MainPresenter {
         mainView?.showTranslatedEnglish("")
     }
 
-    override fun onCopyEnglishTextRequested(englishString: String) {
-    }
-
-    override fun onCopyMorseTextRequested(morseString: String) {
-
-    }
-
     override fun subscribeView(view: MainView) {
         this.mainView = view
     }

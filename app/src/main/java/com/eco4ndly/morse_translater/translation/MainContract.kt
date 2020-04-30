@@ -54,15 +54,5 @@ interface MainContract {
          * When User clicks on Clear button for English Edit Text field
          */
         fun onEnglishTextFieldClearRequested()
-
-        /**
-         * When User clicks on Copy button for English Edit Text field
-         */
-        fun onCopyEnglishTextRequested(englishString: String)
-
-        /**
-         * When User clicks on Copy button for Morse Code Edit Text field
-         */
-        fun onCopyMorseTextRequested(morseString: String)
     }
 }
