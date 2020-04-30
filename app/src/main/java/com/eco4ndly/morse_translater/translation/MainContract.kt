@@ -9,6 +9,9 @@ import com.eco4ndly.morse_translater.base.BaseView
  * A Sayan Porya code on 28/04/20
  */
 interface MainContract {
+    /**
+     * View contract for {@see MainActivity.kt}
+     */
     interface MainView: BaseView {
 
         /**
@@ -27,6 +30,9 @@ interface MainContract {
         fun showToast(@StringRes stringId: Int)
     }
 
+    /**
+     * Presentation contract for {@see MainActivity.kt}
+     */
     interface MainPresenter: BasePresenter<MainView> {
 
         /**
