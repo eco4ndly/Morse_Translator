@@ -1,5 +1,6 @@
 package com.eco4ndly.morse_translater.extensions
 
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -50,9 +51,13 @@ fun EditText.textChanges() = callbackFlow<String> {
             }
         }
 
-        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            //There is no requirement of implementation
+        }
 
-        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            //There is no requirement of implementation
+        }
 
     })
 
@@ -140,7 +145,7 @@ fun String.launchBrowserIfUrl(context: Context) {
       addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       context.startActivity(this)
     }
-  } catch (e: Exception) {
+  } catch (e: ActivityNotFoundException) {
     e.printStackTrace()
   }
 }
