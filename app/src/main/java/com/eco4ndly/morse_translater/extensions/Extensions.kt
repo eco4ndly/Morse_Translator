@@ -70,7 +70,6 @@ fun EditText.textChanges() = callbackFlow<String> {
 private fun <E> SendChannel<E>.safeOffer(value: E) = !isClosedForSend && try {
     offer(value)
 } catch (t: Throwable) {
-    // Ignore all
     false
 }
 
