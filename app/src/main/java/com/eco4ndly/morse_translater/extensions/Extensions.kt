@@ -26,6 +26,9 @@ import java.lang.Exception
  * A Sayan Porya code on 28/04/20
  */
 
+/**
+ * Sets on click listener to a view
+ */
 @ExperimentalCoroutinesApi
 fun View.clicks(): Flow<Unit> = callbackFlow {
     val listener = View.OnClickListener { safeOffer(Unit) }
@@ -35,6 +38,9 @@ fun View.clicks(): Flow<Unit> = callbackFlow {
     }
 }
 
+/**
+ * Adds a text watcher i.e. text change listener to a edittext
+ */
 @ExperimentalCoroutinesApi
 fun EditText.textChanges() = callbackFlow<String> {
     addTextChangedListener(object :TextWatcher {
@@ -56,7 +62,7 @@ fun EditText.textChanges() = callbackFlow<String> {
 }
 
 @ExperimentalCoroutinesApi
-fun <E> SendChannel<E>.safeOffer(value: E) = !isClosedForSend && try {
+private fun <E> SendChannel<E>.safeOffer(value: E) = !isClosedForSend && try {
     offer(value)
 } catch (t: Throwable) {
     // Ignore all
@@ -125,6 +131,9 @@ fun Any.clicks(vararg views: View, mainScope: CoroutineScope, onClick: (viewId: 
 val <T> T.exhaustive: T
   get() = this
 
+/**
+ * Launches web browser if the string qualifies as a web url
+ */
 fun String.launchBrowserIfUrl(context: Context) {
   try {
     Intent(Intent.ACTION_VIEW, Uri.parse(this)).apply {
@@ -135,6 +144,3 @@ fun String.launchBrowserIfUrl(context: Context) {
     e.printStackTrace()
   }
 }
-
-fun ViewGroup.inflate(@LayoutRes resource: Int, attachToRoot: Boolean = false): View =
-  LayoutInflater.from(context).inflate(resource, this, attachToRoot)
